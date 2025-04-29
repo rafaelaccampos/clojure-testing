@@ -6,6 +6,9 @@
   :dependencies [[org.clojure/clojure "1.12.0"]]
   :profiles { :dev {
                     :source-paths   ["dev"]
-                    :dependencies [[nubank/matcher-combinators "3.9.1"]]
+                    :dependencies
+                    [[nubank/matcher-combinators "3.9.1"]
+                    [nubank/state-flow "5.20.2-beta.2"]
+                    [state-flow-helpers "12.25.3"]]
                     }}
   :repl-options {:init-ns clojure-testing.core})
