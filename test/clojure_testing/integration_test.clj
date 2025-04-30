@@ -4,9 +4,9 @@
 ;;We combine it with the closed source state-flow-helpers to write and run integrations tests.
 
 (require
-  '[state-flow.api :refer [flow]]
   '[state-flow.api :refer [flow defflow match?]]
-  '[state-flow.helpers.component.servlet :as servlet])
+  '[state-flow.helpers.component.servlet :as servlet]
+)
 
 ;;A flow is a sequence of steps or bindings to be executed with some state as a reference.
 (flow "do many things"
@@ -18,7 +18,6 @@
   (flow "using match"
     (match? 1 1)
     (match? {:a 1} {:a 1 :b 2})))
-
 ;;state-flow.helpers.servlet
 ;;You can use state-flow.helpers.servlet to test HTTP requests.
 ;;The example below tests if getting /api/hello-world returns {:status 200 :body {:greeting "Hello World!"}}.
